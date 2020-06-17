@@ -7,21 +7,30 @@
 
 function averageMark(a, g, p) {
 	
-    // реализуйте здесь задание №1
+    let algebra = a;
+    let geography = g;
+    let physics = p;
     
-	return // ваш ответ;
+	return (algebra + geography + physics) / 3;
 }
+
 
 function sayHello(userName) {
 	
-    // реализуйте здесь задание №2
+    let myName = userName;
+    let message = 'Привет, мир! Меня зовут ' + myName// реализуйте здесь задание №2
     
-	return // ваш ответ;
+	return message;// ваш ответ;
 }
+
 
 function calculateFormula() {
     
-	// реализуйте здесь задание №3
+	let x = 2;
+	let y = 22;
+	let z = 0;
+	let result = x * y + 5 * z + x - 1;// реализуйте здесь задание №3
     
-    return // ваш ответ;
+    return result;// ваш ответ;
 }
+
