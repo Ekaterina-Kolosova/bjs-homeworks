@@ -8,13 +8,13 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
     let paymentMonth = creditAmount * (p + p / (Math.pow((1 + p), creditMonth) - 1));
     let totalAmount = paymentMonth * creditMonth;
     totalAmount = Number(totalAmount.toFixed(2));
-    console.log(totalAmount)
+    console.log(totalAmount);
 
     return totalAmount;
 }
 
 function getGreeting(name) {
-    let greeting 
+    let greeting; 
     if (name) {
     	greeting = `Привет, мир! Меня зовут ${name}`;
     } else {
