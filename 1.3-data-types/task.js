@@ -1,7 +1,19 @@
 'use strict';
 
 function calculateTotalMortgage(percent, contribution, amount, date) {
+	if (isNaN(percent)) {
+    	return `Параметр <Процентная ставка> содержит неправильное значение <${percent}>`;
+	};
+
+	if (isNaN(contribution)) {
+		return `Параметр <Начальный взнос> содержит неправильное значение <${contribution}>`;
+	};
 	
+	if (isNaN(amount)) {
+		return `Параметр <Общая стоимость> содержит неправильное значение <${amount}>`;
+	};
+	
+
     let creditAmount = amount - contribution; 
     let creditMonth = Math.round((date - new Date()) / (30 * 24 * 1000 * 3600)); 
     let p = (1 / 12) * (percent / 100);
@@ -14,13 +26,6 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
 }
 
 function getGreeting(name) {
-    let greeting; 
-    if (name) {
-    	greeting = `Привет, мир! Меня зовут ${name}`;
-    } else {
-    	greeting = 'Привет, мир! Меня зовут Аноним';
-    }
-
-    console.log(greeting);
-    return greeting;
+    console.log(`Привет, мир! Меня зовут ${name || 'Аноним'}`);
+    return (`Привет, мир! Меня зовут ${name || 'Аноним'}`);
 }
