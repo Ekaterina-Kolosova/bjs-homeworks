@@ -92,7 +92,7 @@ class Library {
 		let foundBook;
 		for (let i = 0; i < this.books.length; i++) {
 			if (bookName === this.books[i].name) {
-				foundBook = this.books.splice(i, 1);
+				foundBook = this.books.splice(i, 1)[0];
 			} else {
 				foundBook = null;
 			};
